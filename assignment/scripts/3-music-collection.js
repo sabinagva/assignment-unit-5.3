@@ -56,9 +56,8 @@ function findByArtist(artist) {
     let ArtistResult = [];
     for(album of collection) {
         if(album.artist === artist ) {
-            // console.log('match');
-            ArtistResult.push(album)
-            // console.log(ArtistResult)
+           ArtistResult.push(album)
+              
         }   
     }
     return ArtistResult
