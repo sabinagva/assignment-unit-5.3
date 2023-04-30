@@ -28,8 +28,9 @@ console.log('new array is', collection)
 //   - After all are added, console.log the `collection` array.
 addToCollection('Multitude', 'Stromae', 2022);
 addToCollection('Very Few Friends', 'Saint Levant', 2022);
-addToCollection('Aeris Roves', 'Moon By Island Gardens', 2018);
-addToCollection('Kid Cudi', 'Man On The Moon', 2009);
+addToCollection('Moon By Island Gardens','Aeris Roves', 2018);
+addToCollection('Man On The Moon', 'Kid Cudi',  2009);
+addToCollection('Man On The Moon 2', 'Kid Cudi',  2016);
 addToCollection('Mini World', 'Indila', 2014);
 addToCollection('Locket', 'Crumb', 2017);
 console.log('new array is', collection);
@@ -53,21 +54,33 @@ showCollection(collection)
 //   - Return the array with the matching results. If no results are found, return an empty array.
 function findByArtist(artist) {
     let ArtistResult = [];
-    for(match of collection); {
-    console.log('result is', match)
+    for(album of collection) {
+        if(album.artist === artist ) {
+            // console.log('match');
+            ArtistResult.push(album)
+            // console.log(ArtistResult)
+        }   
     }
-    if (collection === ArtistResult) {
-    console.log(match);
-    }
-    else
-    {
-    console.log('no results found')
-    }
-    findByArtist('kid cudi')
-    
-
-
-    
-
+    return ArtistResult
+console.log('this is the argument', artist);
 }
-findByArtist('kid cudi')
+console.log(findByArtist('Kid Cudi'))
+console.log(findByArtist('Crumb'))
+console.log(findByArtist('bob'))
+
+
+
+
+    // if (collection === ArtistResult) {
+    // console.log(match);
+    // }
+    // else
+    // {
+    // console.log('no results found')
+    // }
+    
+    
+
+
+    
+
